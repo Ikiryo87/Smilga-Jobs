@@ -1,4 +1,4 @@
-const BtnContainer = ({ data, changeCurrItem }) => {
+const BtnContainer = ({ data, currItem, changeCurrItem }) => {
   return (
     <div className="btn-container">
       {data.map((job, index) => {
@@ -6,7 +6,7 @@ const BtnContainer = ({ data, changeCurrItem }) => {
           <button
             key={job.id}
             type="button"
-            className="job-btn"
+            className={index === currItem ? "job-btn active-btn" : "job-btn"}
             onClick={() => changeCurrItem(index)}
           >
             {job.company}

@@ -40,7 +40,11 @@ const App = () => {
 
   return (
     <section className="jobs-center">
-      <BtnContainer data={data} changeCurrItem={changeCurrItem} />
+      <BtnContainer
+        data={data}
+        currItem={currItem}
+        changeCurrItem={changeCurrItem}
+      />
       <JobInfo data={data} currItem={currItem} />
     </section>
   );
